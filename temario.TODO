@@ -1,0 +1,36 @@
+ ☐ Instalar Rails (JRuby con RVM)
+ ☐ Quickstart: La primera aplicación (blog)
+ ☐ Arquitectura de una app rails
+   ☐ Models, Views, Controllers
+   ☐ Configuración
+ ☐ Controladores y vistas
+   ☐ Actions
+   ☐ Routing
+   ☐ Parámetros
+   ☐ Vistas: erb   
+     ☐ CoffeeScript
+     ☐ Assets pipeline
+   ☐ Response: html y json
+ ☐ Modelos
+   ☐ ActiveRecord
+     ☐ Mapeo: atributos y relaciones
+     ☐ Constraints
+     ☐ Validaciones
+   ☐ Migraciones
+     ☐ Agregar columna
+     ☐ Modificar columna
+   ☐ ABC desde controladores
+   ☐ Finders y Where desde controladores
+   ☐ Buenas práctias: uso de Forms (ActiveModel)
+ ☐ Dependencias
+      ☐ Bundler
+      ☐ Instalación de gemas
+ ☐ Seguridad con Devise y CanCan
+   ☐ Autenticación con Devise
+   ☐ Autorización con CanCan
+
+
+
+
+
+
