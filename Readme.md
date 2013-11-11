@@ -15,6 +15,15 @@ grunt serve
 
 La presentación iniciará en el puerto 8000
 
+
+Temario
+---
+
 El temario está en formato SublimeText, necesitas dicho editor y el plugin [Plain Tasks](https://github.com/aziz/PlainTasks) 
 para abrirlo.
+
+
+
+&copy;Diverza 2013
+
 
