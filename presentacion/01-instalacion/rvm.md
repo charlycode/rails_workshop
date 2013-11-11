@@ -6,7 +6,7 @@ http://rvm.io
 Forma sencilla de administrar Ruby. (Algunos prefieren rbenv)
 
 <pre><code data-trim>
-	curl -L https://get.rvm.io | bash
+curl -L https://get.rvm.io | bash
 
-	rvm -v
+rvm -v
 </code></pre>	

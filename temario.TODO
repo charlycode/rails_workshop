@@ -1,33 +1,40 @@
  ☐ Instalar Rails (JRuby con RVM)
- ☐ Quickstart: La primera aplicación (blog)
+ ☐ Quickstart: La primera aplicación (hello, goodbye)
  ☐ Arquitectura de una app rails
    ☐ Models, Views, Controllers
    ☐ Configuración
- ☐ Controladores y vistas
-   ☐ Actions
-   ☐ Routing
-   ☐ Parámetros
+ ☐ Aplicación
+   ☐ Scaffolding -> Receipt
+   ☐ Controladores -> Crear controlador y action Reporte de comprobantes por rango de fechas
+     ☐ Actions -> report_by_dates
+     ☐ Routing -> post /report/:inicio/:fin
+     ☐ Parámetros -> params
+     ☐ Response: html y json (to_json e includes)
    ☐ Vistas: erb   
+     ☐ Javascript
      ☐ CoffeeScript
-     ☐ Assets pipeline
-   ☐ Response: html y json
- ☐ Modelos
-   ☐ ActiveRecord
-     ☐ Mapeo: atributos y relaciones
-     ☐ Constraints
+     ☐ Assets pipeline *modo development vs production
+   ☐ Modelos
+     ☐ ActiveRecord
+     ☐ Mapeo: atributos y relaciones -> crear modelo "Person" y relacion 1:N con Receipt
      ☐ Validaciones
-   ☐ Migraciones
-     ☐ Agregar columna
-     ☐ Modificar columna
-   ☐ ABC desde controladores
-   ☐ Finders y Where desde controladores
-   ☐ Buenas práctias: uso de Forms (ActiveModel)
- ☐ Dependencias
+     ☐ Migraciones
+       ☐ Agregar columna -> agregar columna de estatus a Receipt
+       ☐ Modificar columna -> cambiarle el tipo a alguna       
+     ☐ Queries
+       ☐ ABC -> seed.rb
+       ☐ Finders
+   ☐ Tips
+     ☐ Fat Models vs Lean models. Ejemplo de refactoring a Business Object
+     ☐ Uso de Forms (ActiveModel) Massive assignment, sanear input, caso github, sacar validaciones del model y ponerlas en el form
+     ☐ Concerns: cuándo se usan y con que fin. No es un business object, es sólo de reuso
+   ☐ Dependencias
       ☐ Bundler
       ☐ Instalación de gemas
- ☐ Seguridad con Devise y CanCan
-   ☐ Autenticación con Devise
-   ☐ Autorización con CanCan
+        ☐ Agregar llaves foráneas con gema Foreigner
+   ☐ Seguridad con Devise y CanCan
+     ☐ Autenticación con Devise
+     ☐ Autorización con CanCan
 
 
 
