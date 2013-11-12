@@ -1,0 +1,37 @@
+<h1>Listing receipts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Rfc emisor</th>
+      <th>Rfc receptor</th>
+      <th>Concept</th>
+      <th>Ammount</th>
+      <th>Tax</th>
+      <th>Total</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @receipts.each do |receipt| %>
+      <tr>
+        <td><%= receipt.rfc_emisor %></td>
+        <td><%= receipt.rfc_receptor %></td>
+        <td><%= receipt.concept %></td>
+        <td><%= receipt.ammount %></td>
+        <td><%= receipt.tax %></td>
+        <td><%= receipt.total %></td>
+        <td><%= link_to 'Show', receipt %></td>
+        <td><%= link_to 'Edit', edit_receipt_path(receipt) %></td>
+        <td><%= link_to 'Destroy', receipt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Receipt', new_receipt_path %>

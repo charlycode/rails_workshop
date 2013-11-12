@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rfc emisor:</strong>
+  <%= @receipt.rfc_emisor %>
+</p>
+
+<p>
+  <strong>Rfc receptor:</strong>
+  <%= @receipt.rfc_receptor %>
+</p>
+
+<p>
+  <strong>Concept:</strong>
+  <%= @receipt.concept %>
+</p>
+
+<p>
+  <strong>Ammount:</strong>
+  <%= @receipt.ammount %>
+</p>
+
+<p>
+  <strong>Tax:</strong>
+  <%= @receipt.tax %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @receipt.total %>
+</p>
+
+<%= link_to 'Edit', edit_receipt_path(@receipt) %> |
+<%= link_to 'Back', receipts_path %>
