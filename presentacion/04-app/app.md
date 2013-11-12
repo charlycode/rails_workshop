@@ -26,7 +26,7 @@ Configuramos para que siempre use jruby
 
 source 'https://rubygems.org'
 
-ruby '1.9.4', :engine => 'jruby', :engine_version => '1.7.6'
+ruby '1.9.3', :engine => 'jruby', :engine_version => '1.7.6'
 </code></pre>
 
 Note:
@@ -39,3 +39,19 @@ Scaffolding
 ===
 
 ![Scaffolding](img/scaffolding.jpg)
+
+
+
+Un comando
+===
+
+<pre><code data-trim>
+rails generate scaffold Receipt rfc_emisor:string rfc_receptor:string 
+concept:string ammount:decimal tax:decimal total:decimal
+#actualizamos la base de datos
+rake db:migrate
+#iniciamos el server
+rails server
+</code></pre>
+
+http://localhost:3000/receipts
