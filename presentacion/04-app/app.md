@@ -55,3 +55,19 @@ rails server
 </code></pre>
 
 http://localhost:3000/receipts
+
+
+
+¿Qué hacer cuando no necesitamos un ABC?
+===
+
+Caso de uso: Reporte de comprobantes por RFC receptor
+
+
+
+Paso 1: Creamos un controlador
+====
+
+<pre><code data-trim>
+rails generate controller report
+</code></pre>
