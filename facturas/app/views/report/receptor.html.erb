@@ -1,0 +1,20 @@
+<h1>Comprobantes con el RFC receptor: <%= @rfc_receptor %></h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>RFC Emisor</th>
+			<th>RFC Receptor</th>
+			<th>Total</th>
+		</tr>
+	</thead>
+	<tbody>
+<% @receipts.each do |receipt| %>
+		<tr>
+			<td><%= receipt['emisor'] %></td>
+			<td><%= receipt['receptor'] %></td>
+			<td><%= receipt['total'] %></td>
+		</tr>
+<% end %>
+	</tbody>
+</table>

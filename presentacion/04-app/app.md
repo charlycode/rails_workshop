@@ -65,9 +65,27 @@ Caso de uso: Reporte de comprobantes por RFC receptor
 
 
 
-Paso 1: Creamos un controlador
+1: Creamos un controlador
 ====
 
 <pre><code data-trim>
 rails generate controller report
+</code></pre>
+
+
+
+2: Creamos un action
+====
+
+<pre><code data-trim>
+#archivo app/controllers/report_controller.rb
+	
+class ReportController < ApplicationController
+
+	def receptor
+		receptor = params['receptor']
+		puts "receptor => #{receptor}"
+	end
+	
+end
 </code></pre>

@@ -45,7 +45,7 @@ Action Pack: Controladores
 - Ruteo de peticiones a controladores.
 - Cache.
 - Sesiones.
-- ApplicationController: clase base.
+- ActionController: clase base.
 
 
 
