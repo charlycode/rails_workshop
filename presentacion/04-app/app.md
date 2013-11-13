@@ -290,3 +290,38 @@ Rails genera un archivo js al vuelo en modo development
 Assets pipeline para modo productivo
 ===
 
+Detén tu servidor rails (Ctrl+c) y reinícialo en modo productivo
+<pre><code data-trim>
+rails server -e production
+</code></pre>
+
+Recarga la página: No existe el archivo js
+
+
+
+El assets pipeline "precompila" los assets:
+
+- Genera js a partir del archivo coffeescript.
+- Genera CSS a partir de Sass.
+- Minimiza y concatena js.
+- Minimiza y concatena css.
+- Agrega un fingerprint a los archivos.
+
+
+
+Ejecuta
+===
+
+<pre><code data-trim>
+rake assets:precompile
+</code></pre>
+
+
+
+Configuración
+===
+
+<pre><code data-trim>
+#edita archivo config/environments/production	
+config.serve_static_assets = true
+</code></pre>
