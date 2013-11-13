@@ -8,6 +8,11 @@ class ReportController < ApplicationController
 			{ 'emisor' => 'ZXC070801WWW','receptor' => @rfc_receptor, 'total' => 98211.45}
  		]
 		puts "receptor => #{@rfc_receptor}"
+		#respond_to do |format|
+		#	format.html
+		#	format.json{ render json: @receipts }
+		#end
+		
 	end
 
 end

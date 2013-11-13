@@ -67,3 +67,19 @@ Filosofía
 - Gratificación instantánea.
 - DRY: Don't Repeat Yourself.
 - Convention over configuration.
+
+
+
+Desarrollo ágil
+===
+
+![Snail](img/snail.gif)
+
+
+
+Rails es Omakase
+===
+
+![omakase](img/omakase.jpg)
+
+http://david.heinemeierhansson.com/2012/rails-is-omakase.html

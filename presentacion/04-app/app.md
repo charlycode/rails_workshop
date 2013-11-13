@@ -108,8 +108,8 @@ http://localhost:3000/report/receptor?receptor=AAA010101AAA
 ====
 
 <pre><code data-trim>
+#archivo app/views/report/receptor.html.erb
 <h1>Comprobantes con el RFC receptor: <%= @rfc_receptor %></h1>
-
 <table>
 	<thead>
 		<tr>
@@ -128,7 +128,8 @@ http://localhost:3000/report/receptor?receptor=AAA010101AAA
 <% end %>
 	</tbody>
 </table>
-</code></pre>
+</pre></code>
+
 
 
 
@@ -187,3 +188,105 @@ end
 </code></pre>
 
 http://localhost:3000/report/AAA010101AAZ.json
+
+
+
+View Helpers
+===
+
+Los view helpers nos ayudan a modularizar el código de presentación.
+
+
+
+
+Predefinidos
+===
+
+<pre><code data-trim>
+#archivo app/views/report/receptor.html.erb
+<h1>Comprobantes con el RFC receptor: <%= @rfc_receptor %></h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>RFC Emisor</th>
+			<th>RFC Receptor</th>
+			<th>Total</th>
+		</tr>
+	</thead>
+	<tbody>
+<% @receipts.each do |receipt| %>
+		<tr>
+			<td><%= receipt['emisor'] %></td>
+			<td><%= receipt['receptor'] %></td>
+			<td><%= number_to_currency(receipt['total']) %>			
+			</td>
+		</tr>
+<% end %>
+	</tbody>
+</table>
+</code></pre>
+
+
+
+Personalizados
+===
+
+Abre el archivo app/helpers/receipts_helper.rb
+
+<pre><code data-trim>
+module ReceiptsHelper
+	def total( total )
+		"$ #{total} MXN"
+	end
+end
+</code></pre>
+
+
+
+Reemplaza en receptor.html.erb
+<pre><code data-trim>
+<!--<td><%= number_to_currency(receipt['total']) %> -->
+<td><%= total(receipt['total']) %>
+</code></pre>
+
+
+
+javascript
+===
+
+![Coffeescript](img/coffeescript_logo.jpg)
+
+
+
+Agregar código al archivo de CS
+===
+
+<pre><code data-trim>
+#archivo app/assets/javascripts/reports.js.coffee
+$(document).ready ->
+	$('td.total').hover (
+		(ev) ->alert('El monto total es informativo')
+		)
+</code></pre>		
+
+jQuery ya viene incluido.
+
+
+
+Agrega una clase css al html y recarga la página
+<pre><code data-trim>
+<td class="total"><%= total(receipt['total']) %>
+</code></pre>
+
+
+
+Rails genera un archivo js al vuelo en modo development
+
+![js](img/js_generado.jpg)
+
+
+
+Assets pipeline para modo productivo
+===
+

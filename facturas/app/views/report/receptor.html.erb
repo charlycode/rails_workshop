@@ -13,7 +13,10 @@
 		<tr>
 			<td><%= receipt['emisor'] %></td>
 			<td><%= receipt['receptor'] %></td>
-			<td><%= receipt['total'] %></td>
+
+			<!--<td><%= number_to_currency(receipt['total']) %> -->
+			<td class='total'><%= total(receipt['total']) %>
+			</td>
 		</tr>
 <% end %>
 	</tbody>
