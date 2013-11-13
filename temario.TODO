@@ -6,8 +6,8 @@
  ☐ Aplicación
    ☐ Scaffolding -> Receipt
    ☐ Controladores -> Crear controlador y action Reporte de comprobantes por rango de fechas
-     ☐ Actions -> report_by_dates
-     ☐ Routing -> post /report/:inicio/:fin
+     ☐ Actions -> report_by_receptor
+     ☐ Routing -> post /report/:receptor
      ☐ Parámetros -> params
      ☐ Response: html y json (to_json e includes)
    ☐ Vistas: erb   

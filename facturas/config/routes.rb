@@ -1,7 +1,9 @@
 Facturas::Application.routes.draw do
 
-  get "report/receptor"
+  #get "report/receptor"
   
+  get '/report/:receptor', to: 'report#receptor'
+
   resources :receipts
 
   
